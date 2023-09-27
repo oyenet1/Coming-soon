@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binters Market Place | Coming soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bgimg bg-center bg-cover" style="background-image: url('img/bg.jpeg');">
+    <div class=" h-screen w-screen bg-opacity-75 flex justify-center items-center">
+        <div
+            class="max-w-xl mx-auto space-y-3 text-center lg:space-y-4 text-white bg-black bg-opacity-75 rounded-lg shadow-lg px-4 py-6 lg:py-8">
+            <img src="/img/binters-r.png" alt="Binters Marketplace"
+                class="bg-white max-w-[300px] rounded-lg mx-auto inline-block">
+            <div class="middle">
+                <h1 class="text-xl md:text-2xl font-medium">COMING SOON!!!</h1>
+            </div>
+            <div class="bottomleft">
+                <p id="demo" class="text-3xl md:text-5xl font-extrabold"></p>
+            </div>
+            <h2 class="text-2xl font-medium">Smart People Shop with Binters!</h2>
+            <ol class="list-decimal text-left list-outside pl-6">
+                <li>Because we think you are smart.</li>
+                <li>
+                    You will earn multiple points each time you buy from us.
+                </li>
+                <li>
+                    Our vendors have all you need, everyday.
+                </li>
+                <li>
+                    We want you, as a vendor, to increase your number of customers by more than 500%.
+                </li>
+                <li>
+                    We want you, as a vendor, to retain all your customers.
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 19, 2023 11:59:59").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
+</html>
